@@ -5,14 +5,14 @@
 /.pnp
 .pnp.js
 .env
-axios.js
+
 
 # testing
 /coverage
 
 # production
 /build
-
+"./src/axios.js"
 # misc
 .DS_Store
 .env.local
