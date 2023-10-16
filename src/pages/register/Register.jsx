@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from 'axios'
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import makeRequest from "../../axios"; 
 
 const Register = () => {
   const navigator = useNavigate()
@@ -26,8 +27,10 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   try{
-    const sentData  = await axios.post("http://localhost:4000/api/auth/register",inputs
-    )
+    const sentData = await makeRequest.post(
+      "auth/register",
+      inputs
+    );
       toast.success("User created Successfully ");
       navigator("/login")
     
