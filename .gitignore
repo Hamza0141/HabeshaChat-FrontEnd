@@ -11,6 +11,7 @@
 /coverage
 
 # production
+/build
 /src/axios.js
 # misc
 .DS_Store
